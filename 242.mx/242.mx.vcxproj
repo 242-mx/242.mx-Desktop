@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{F33D8218-4837-4872-9B51-E9E41F80E6A3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My242mx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;MY242MX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;MY242MX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;MY242MX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;MY242MX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="242.mx.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\ACC – Accounting.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Balanced Scorecard.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Customers.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Finance.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Innovation and Improvement.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Key Performance Indicators.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Operations.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BSC – Prespectives.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\BUD – Budgets.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\CDMX – Mother%27s Day Monument.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\COL – Checklist.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\COL – Compliance of the Law.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\COL – Contracts and Agreements.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\COL – Legal Constitution.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\EMS – Environmental.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\HRS – Broker.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\HRS – Human Resources.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\HRS – Medical Data.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – History.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Integrated Management System.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Key.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Leadership.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Status For Rent.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Status For Sale.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Status Sold.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Training.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\IMS – Under Maintenance.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\ISMS – Information Security.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\LOG – Logistics.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – CFE®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – CompraNet.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Consejería Jurídica del Ejecutivo Federal.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Consejo Nacional de Población.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Cámara de Diputados.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Instituto Fomento Nacional de la Vivienda de los Trabajadores.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Instituto Mexicano del Seguro Social.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Instituto Nacional de Migración (2).ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Instituto Nacional de Migración.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Instituto Politécnico Nacional.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Locatel.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Metro® de la CDMX.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – PEMEX®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Procuraduría General de la República.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Bienestar.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Comunicaciones y Transportes.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Economía.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Educación Pública.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Energía.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Gobernación.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Hacienda y Crédito Público.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de la Defensa Nacional.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de la Función Pública.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Marina.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Medio Ambiente y Recursos Naturales.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Relaciones Exteriores.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Salud.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría de Turismo.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Secretaría del Trabajo y Previsión Social.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Senado de la República.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Sistema de Administración Tributaria.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Suprema Corte de Justicia de la Nación.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Governmental Institutions – Universidad Nacional Autónoma de México.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Political Parties – Movimiento de Regeneración Nacional.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Political Parties – Partido Accion Nacional.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Political Parties – Partido de la Revolución Democrática.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Mexico%27s Political Parties – Partido Revolucionario Institucional.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Adquisitions.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Assets.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Banks.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Bonds.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Colecctions.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Finance.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Financial Reports.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Foreign Exchange.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Insurances.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Management.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Payrolls.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Taxes and Employer Fees.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Treasury.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MGT – Warehouses.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Advertisement.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Air Conditioning.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Aluminum &amp; Glass Door Frames-icono.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Atletics.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Automatic Doors.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Badminton.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Baseball.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Bathroom Appliances.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – BMX Cycling.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Bowling.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Carpintery Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Certificate.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Cleaning Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Conferences.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Constructor Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Contact Center.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Customers.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Fireplace Design.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Foreclosure Auction.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Formula One Racings.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Futbol.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Gardenscape Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Home Appliances.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Home Furniture.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Home Security.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Homescapes Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Indoor Lighting.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Indoor Plants.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Integral Health Scorecard.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Judo.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Location.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Maintenance Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Marketing.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Moving Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Painting and Renovation.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Plumbing.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Pool Maintenance.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Property Search.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Real Estate Investing.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Real Estate Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Rhythmic Gymnastics.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Short Sale.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Software.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Sports &amp; Entertainment.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Sports _ Entertainment.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Steel Wokrs.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Storage &amp; Organization.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Surveillance Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Swimming.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Track Cycling.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Waterproofing.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Web &amp; Email.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Win-Win Negotiation.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\MKT – Workscapes Services.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\OHSMS – Occupational Health and Safety.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\PMO – Drawings and Specifications.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\PMO – Operations.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\PMO – Projects.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\QMS – Quality.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\SCR – SCRUM Team.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\SCR – SCRUM.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – CRM.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Electricity, Plumbing and Steel wokrs.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Electricity.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – ERP.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Facilities.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Machinery and Equipment.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – PBX.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Settings.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Technology &amp; Maintenance.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Technology.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\T&amp;M – Telecommunications.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – 242.mx®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – 3COM®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – 3M®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – 7 Eleven®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – 7up®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – 8 Jugo de Verduras® Herdez®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Acabados y Construcciones MANN®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ACE Fianzas Monterrey®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ACE®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ACURA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Adobe Acrobat® PDF.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Adobe Dreamweaver®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Adobe Flash®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Adobe Photoshop®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Afianzadora Insurgentes®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Amazon®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – AMC Networks®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – American Broadcasting Company®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – American Express®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Android®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Animal Planet®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Apache Software Foundation®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Ariel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aserta®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel Banco®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel Caja®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel COI®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel NOI®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel PROD®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel SAE®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Aspel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Asterisk®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ASUS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – AT&amp;T®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Audi®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Autodesk AutoCAD®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Autodesk Sketchup®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Avaya®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Axtel-Alestra®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Banco Azteca®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Banorte®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Barcel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – BBVA Bancomer®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Berkley International®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – BIMBO Bakeries USA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – BIMBO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – BMW®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Bodega Aurrera®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – BOSCH®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Bose®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Brithish Broadcasting Company®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Brother®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Burger King®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Búfalo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Café La Parroquia de Veracruz®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Café Punta del Cielo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Canon®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Caracol Televisión®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Carl%27s Jr.®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CARVID®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Casa de las Lomas Muebles®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CBL FIducia®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CEMEX®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CentOS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Centro de Atención y Procesamiento Telefónico Aplicado®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CESCE®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Chedraui®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Chevrolet®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Choco Milk®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Chrysler®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CHUBB®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CIBSA Inmobiliaria® alternative.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CIBSA Inmobiliaria®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CIBSA® complete.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CIBSA® logo.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CIBSA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Cielito Querido Café®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Cinemex®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Cinépolis®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Circle K®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CISCO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CitiBanamex®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Civil Engineering.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Claro®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Clemente Jacques®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – CMIC®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – COBIT 2019.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Coca-Cola FEMSA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Coca-Cola® inverted.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Coca-Cola®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Columbia Broadcasting Company®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – COMETRA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Comex®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – COMSA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Coppel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Cortinas Anáhuac® 2019.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Cortinas Anáhuac®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Cotonetes®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – cPanel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Credomatic®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Crédito Afianzador®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Debian®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Del Fuerte®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Deutsche Welle®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – DHL®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Diners Club International®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Discovery Channel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Discovery Kids®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Dodge®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Domino%27s Pizza®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Don Asado Parrillada Uruguaya®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Downy®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – eBay®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Elaxtix®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Elektra®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – EnviaYa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – EPSON®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Escuela Bancaria y Comercial®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Estafeta®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – EXATEC®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Expendio BIMBO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fabuloso®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Facebook®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fanta®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – FedEx®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fedora®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fester®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fianzas ASECAM®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fianzas Atlas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fianzas Avanza®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fianzas Dorama®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fianzas La Guardiana Inbursa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fisher%27s Excelencia en Mariscos®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Ford Motor Company®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Formica®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – FreeBSD®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Frito Lay®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Fuji Xerox®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Galletas Gabi®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Galletas Gamesa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Galletas Marías Gamesa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ganahuac.com®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Gas LP.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – General Motors Company®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – General Motors®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Gillette®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – GIMP®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – GitHub® logo white.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – GitHub® logo.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – GitHub® Mark white.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – GitHub® Mark.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Google AI®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Google Gmail®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Google® Apps.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Google® Chrome.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Google®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Gore-Tex®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Grupo BIMBO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Grupo Elektra®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Grupo Salinas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Grupo Sanborns®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Grupo Seguridad Integral®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – GSI Seguridad Privada®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Harvard University®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Heinz®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Helados Nestle®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Hellmann%27s®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Herdez®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Hewlett-Packard®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – History Channel 2®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – History Channel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Honda®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Hospedando.com.mx®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Hospital General de México®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – IBM Watson®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – IBM®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ICI PintuSayer Pinturas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – iHOP Restaurantes®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Inbursa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – inConcert®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Instagram®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – iOS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ITESM®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – ITIL® versión 4.0.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Izzi®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Janet Juárez Construcciones®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Jeep®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Jell-o®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Joomla!®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Kenwood®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – KIA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Kleenex®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Kola Loka®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Krazy Glue®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – La Casa de Toño®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – La Costeña®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – La Europea®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – La Mansión Restaurantes®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – LaComer®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Lara®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Lenovo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Liberty Fianzas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Linio®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – LinkedIn®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Linux®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Little Caesars Pizza®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Liverpool®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Mac OS X®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Maestro®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Magento®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Mandala Desodorante Ecológico®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Manzanita Sol®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MAPFRE®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Marinela®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MasterCard®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – McCormick®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – McDonald%27s®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MDY Contact Center &amp; BPO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MediaWiki®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MercadoLibre®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Mercedes-Benz®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Merik®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Access®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Excel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Internet Explorer®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Internet Information Services®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Office®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft PowerPoint®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Project®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Publisher®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft SQL Server®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Visio®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Visual Studio®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft Windows®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MIcrosoft Word®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft® Paint.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Microsoft®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Mitsubishi®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Mole Doña María®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Muebles DICO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Multimedios Televisión®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – MySQL®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – National Boradcasting Company®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – NEC®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – NeoData Comercialización de Viviendas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – NeoData ERP®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – NeoData Precios Unitarios®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – NeoData®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Nesquik®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – NetBeans®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Nortel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Nutrisa® original.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Nutrisa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Odoo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Opel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Open SSH®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Oracle®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Oxxo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Panasonic®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Papa John%27s Pizza®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pastelerías El Globo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – PayPal®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – PEPSICO®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pepsi®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Periódico El Norte®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Periódico El Universal®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Periódico Excélsior®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Periódico Reforma®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pinterest®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pioneer®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pizza Hut®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – PMI-PMP®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – PMI®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – PostgreSQL®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Potzolllcalli® Restaurante Mexicano.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pritt®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – PROSA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Pérez Florean y Asociados®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Q-Tips® Cotton Swabs.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Quálitas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Recorcholis®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Red Cola®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Red Hat®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Renault®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Ricolino®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sabritas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sam%27s Club®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Samsung®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sanborns®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Santander®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sanyo®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sayer®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SBOK®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Scotiabank®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SEARS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SEAT®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SEGUPIB®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Seguritec®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Seguros Atlas®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SEPSA Custodias®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Servicio Panamericano de Protección®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Servicios Electrónicos Globales (E-Global)®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SHARP®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sherwin WIlliams®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sidral AGA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sidral Mundet original®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sidral Mundet®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SIEMENS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sika®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Slackware®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Snob Shop®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SOFIMEX®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sony®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Soriana®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Squirt®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Starbucks Coffee®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Suavitel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Subaru®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Suburbia®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – SugarCRM®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Superama®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sushi Roll®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Sushiitto®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Taxi.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Tecnoguard®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Tecnoval®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Telcel®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Televisa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Telmex®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – The Home Depot®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Tia Rosa®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Tide®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Tiendas Extras®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Toks Restaurantes®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Totalplay®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Toyota®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – TV Azteca®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Twitter®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Ubuntu®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Unefon®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – UNITEC®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Universidad del Valle de México®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Universidad Tecmilenio®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Univision®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – UPS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Velcro®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – VIPS®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Virgin Mobile®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – VISA®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – VMEdu®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Volkswagen®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Walmart®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Wendy%27s®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Wireshark®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Wonder Bread®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – WordPress®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – YouTube®.ico" />
+    <Image Include="..\..\..\IMS – Gestión del sistema\Anexo C – Recursos del sistema\Trade Marks – Zurich®.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
